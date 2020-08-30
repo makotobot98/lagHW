@@ -36,7 +36,7 @@ with tmp as (
 with tmp2 as (  
   select t.id id, t.duration duration, sum(t.label) over(partition by t.id order by t.dt rows between current row and unbounded preceding) partition_label
   from (
-    select id, (tmp.time - tmp.ptime)/60 duration, case when (tmp.time - tmp.ptime)/60 <= 30 then 1 else 0 end label
+    select id, (tmp.time - tmp.ptime)/60 duration, case when (tmp.time - tmp.ptime)/60 >= 30 then 1 else 0 end label
   ) t
 )
 
