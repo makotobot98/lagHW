@@ -1,3 +1,5 @@
+package com.makoto.zk;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -8,6 +10,6 @@ public class Dummy {
     @GET
     @Produces("text/plain")
     public String getClichedMessage() {
-        return "Dummy Page counter: " + Main.myCounter;
+        return "com.makoto.zk.Dummy Page counter";
     }
 }

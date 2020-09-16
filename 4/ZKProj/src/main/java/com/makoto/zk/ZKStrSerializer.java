@@ -1,3 +1,5 @@
+package com.makoto.zk;
+
 import org.I0Itec.zkclient.exception.ZkMarshallingError;
 import org.I0Itec.zkclient.serialize.ZkSerializer;
 

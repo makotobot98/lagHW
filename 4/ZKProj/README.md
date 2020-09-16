@@ -2,11 +2,11 @@
 
 stacks: **DBCP Connection Pool**, **ZooKeeper**, **GlassFish server**
 
-- driver file may be found at `src/Main.java`
+- driver file may be found at `src/com.makoto.zk.Main.java`
 - flow:
-    - upon server starts, 'initialize()' method will be invoked once, and will create the DB connection pool instance (in `DBUtil.java`)
-    - upon creating a DB connection pool instance, `DBUtil` will register for ZK clienet and subscribe for connection information changes under a **persistent** directory `/hw3-sqlConn`
-    - Client can obtain sql connection through static API `DBUtil.getDBConnection()`
+    - upon server starts, 'initialize()' method will be invoked once, and will create the DB connection pool instance (in `com.makoto.zk.DBUtil.java`)
+    - upon creating a DB connection pool instance, `com.makoto.zk.DBUtil` will register for ZK clienet and subscribe for connection information changes under a **persistent** directory `/hw3-sqlConn`
+    - Client can obtain sql connection through static API `com.makoto.zk.DBUtil.getDBConnection()`
 
 
 
