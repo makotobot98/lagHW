@@ -9,7 +9,7 @@
 - dependency = `import.job`
 
 ## `analysis.sh`
-- fetch the active users of current date and insert into **user_info** table
+- fetch the active users of current date from **user_click** table and insert into **user_info** table
 
 # requiremnt
 1. assume the diretory of current date already exist
