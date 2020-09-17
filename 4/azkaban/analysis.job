@@ -1,0 +1,3 @@
+type=command
+dependencies=import
+command=/usr/bin/sh /root/job/analysis.sh

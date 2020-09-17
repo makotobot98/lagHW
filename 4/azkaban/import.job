@@ -1,0 +1,2 @@
+type=command
+command=/usr/bin/sh /root/job/import.sh
