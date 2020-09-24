@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class redisClusterTest {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws Exception {
 
     Set<HostAndPort> clusterNodes = new HashSet<>();
     clusterNodes.add(new HostAndPort("127.0.0.1", 7001));
