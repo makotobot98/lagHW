@@ -1,3 +1,6 @@
+# Redis Cluster
+- requirements:
+![](rsrc/requirements.png)
 ## create cluster containing 6 nodes
 - dependency:
   - master 7001 - slave 7005
