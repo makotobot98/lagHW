@@ -57,7 +57,7 @@ object KafkaScalaMysqlSync {
     //1 获取sparksession
     val spark: SparkSession = SparkSession.builder()
       .master("local[*]")
-      .appName("kafka-redis")
+      .appName("kafka-mysql")
       .getOrCreate()
     val sc = spark.sparkContext
     sc.setLogLevel("WARN")
@@ -65,7 +65,7 @@ object KafkaScalaMysqlSync {
     //2 定义读取kafka数据源
     val kafkaDf: DataFrame = spark.readStream
       .format("kafka")
-      .option("kafka.bootstrap.servers", "hadoop4:9092")
+      .option("kafka.bootstrap.servers", "linux121:9092")
       .option("subscribe", "lagou_bus_info")
       .load()
     //3 处理数据
@@ -76,7 +76,7 @@ object KafkaScalaMysqlSync {
       BusInfo(msg)
     })
     val writer = new MysqlWriter
-    //4 输出,写出数据到redis和hbase
+    //4 输出,写出数据到mysql
     busInfoDs.writeStream
       .foreach(
         writer
